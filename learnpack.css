@@ -1,5 +1,7 @@
 body{
   margin: 0px;
+  font-family: 'Nunito Sans';
+  color: #37446f;
 }
 /* section header main start */
 .nav-bar-links-wrapper{
