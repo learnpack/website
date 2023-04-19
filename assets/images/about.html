@@ -1,0 +1,824 @@
+---
+layout: page
+title: About
+permalink: /about/
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      /* footer start */
+      body {
+        margin: 0px;
+      }
+
+      .container.footer-container {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 0px;
+      }
+      .footer.dark {
+        padding-top: 20px;
+        background-color: #253057;
+        background-image: url(https://uploads-ssl.webflow.com/60fa039…/60fa039…_footer-shape.svg);
+        background-position: 100% 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      .div-block-2 {
+        width: 20%;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 auto;
+        -ms-flex: 0 auto;
+        flex: 0 auto;
+      }
+      .div-block {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        padding-right: 20px;
+        padding-left: 20px;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+      }
+      .link-2 {
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        -ms-grid-row-align: auto;
+        align-self: auto;
+        color: #c5cee4;
+        text-decoration: none;
+      }
+      .link-3 {
+        display: block;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 auto;
+        -ms-flex: 0 auto;
+        flex: 0 auto;
+        color: #c5cee4;
+        text-decoration: none;
+      }
+      .link-4 {
+        color: #c5cee4;
+        text-decoration: none;
+      }
+      a {
+        width: 100%;
+        background-color: transparent;
+        color: #37446f;
+        text-decoration: underline;
+      }
+
+      /* footer end */
+
+      /* section header main start */
+      .nav-bar-links-wrapper {
+        display: flex;
+        width: 114%;
+      }
+      .navigation.light {
+        position: fixed;
+        background-color: #fff;
+      }
+      .navigation {
+        position: absolute;
+        width: 100%;
+        height: 74px;
+        background-color: transparent;
+      }
+      .w-nav {
+        position: relative;
+        background: #dddddd;
+        z-index: 1000;
+      }
+      .w-nav:before,
+      .w-nav:after {
+        content: " ";
+        display: table;
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-column-end: 2;
+        grid-row-end: 2;
+      }
+      .navbar-container {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 98%;
+        height: 100%;
+        max-width: 1167px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 15px;
+        padding-left: 15px;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      link-block-2 {
+        width: 75%;
+      }
+
+      .w-inline-block {
+        max-width: 100%;
+        display: inline-block;
+      }
+
+      .nav-menu {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      .w-nav-menu {
+        position: relative;
+        float: right;
+      }
+      .link-5 {
+        font-size: 18px;
+        -webkit-transition: color 500ms ease;
+        transition: color 500ms ease;
+        color: #37446f;
+        text-decoration: none;
+      }
+      .link-5 a:visited {
+        color: #37446f;
+      }
+      .buttons-container {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        padding-left: 20px;
+        border-radius: 4px;
+      }
+
+      .w-nav-button {
+        position: relative;
+        float: right;
+        padding: 18px;
+        font-size: 24px;
+        display: none;
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        /* tap-highlight-color: rgba(0,0,0,0); */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .burger-icon {
+        display: none;
+        cursor: pointer;
+      }
+      .w-nav-overlay {
+        position: absolute;
+        overflow: hidden;
+        display: none;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+      }
+      .w-nav:after {
+        clear: both;
+      }
+      .w-nav-overlay [data-nav-menu-open] {
+        top: 0;
+      }
+      [data-nav-menu-open] {
+        display: block !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #c8c8c8;
+        text-align: center;
+        overflow: visible;
+        min-width: 200px;
+      }
+      @media screen and (max-width: 991px) {
+        .burger-icon {
+          position: relative;
+          z-index: 400;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          width: 36px;
+          height: 36px;
+          padding: 4px;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+        }
+        .w-nav[data-collapse="medium"] .w-nav-button {
+          display: block;
+        }
+        .menu-button {
+          padding: 0px;
+        }
+        .top-burger-line {
+          width: 28px;
+          height: 2px;
+          padding-right: 0px;
+          padding-bottom: 0px;
+          border-radius: 20px;
+          background-color: #37446f;
+        }
+        .middle-burger-line {
+          width: 28px;
+          height: 2px;
+          margin-top: 6px;
+          margin-bottom: 6px;
+          padding-right: 0px;
+          padding-bottom: 0px;
+          border-radius: 20px;
+          background-color: #37446f;
+        }
+        .bottom-burger-line {
+          width: 28px;
+          height: 2px;
+          padding-right: 0px;
+          padding-bottom: 0px;
+          border-radius: 20px;
+          background-color: #37446f;
+        }
+        .w-nav[data-collapse="medium"] .w-nav-menu {
+          display: none;
+        }
+        .nav-menu {
+          padding-top: 20px;
+          padding-bottom: 20px;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          border-radius: 0px;
+          background-color: #fff;
+          box-shadow: 0 20px 60px 0 rgb(55 68 111 / 40%);
+        }
+        .buttons-container {
+          width: 96%;
+          margin-right: auto;
+          margin-left: auto;
+          padding-top: 14px;
+          padding-bottom: 14px;
+          padding-left: 0px;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          background-color: #eff3fb;
+        }
+        .w-nav[data-collapse="medium"] .w-nav-menu {
+          display: none;
+        }
+
+        .menu-button {
+          padding: 0px;
+        }
+        .nav-menu {
+          padding-top: 20px;
+          padding-bottom: 20px;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          border-radius: 0px;
+          background-color: #fff;
+          box-shadow: 0 20px 60px 0 rgb(55 68 111 / 40%);
+        }
+      }
+      /* header end */
+
+      /* section1 start */
+      .section.hero-grey {
+        padding-top: 140px;
+        padding-bottom: 120px;
+        background-color: #eff3fb;
+      }
+      .section {
+        position: relative;
+        overflow: hidden;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .container {
+        display: block;
+        width: 100%;
+        max-width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 40px 15px;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background-color: transparent;
+      }
+      .small-container.center {
+        margin-right: auto;
+        margin-left: auto;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+      }
+      .h2.margin {
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+      .h2 {
+        color: #37446f;
+        font-weight: 700;
+      }
+      h2 {
+        font-size: 32px;
+        line-height: 36px;
+        margin-top: 20px;
+      }
+      .h5 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 600;
+      }
+      @media screen and (max-width: 991px) {
+        .section.hero-grey {
+          height: auto;
+        }
+      }
+      @media screen and (max-width: 767px) {
+        .section.hero-grey {
+          padding-top: 120px;
+          padding-bottom: 60px;
+        }
+      } /* section1 end */
+
+      /* section2 start */
+      .two-col-grid {
+        display: -ms-grid;
+        display: grid;
+        width: 100%;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        grid-auto-columns: 1fr;
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        -ms-grid-rows: auto;
+        grid-template-rows: auto;
+      }
+      p {
+        margin-bottom: 0px;
+        color: #8087a6;
+        line-height: 26px;
+      }
+      .text-span {
+        padding-right: 10px;
+        padding-left: 10px;
+        border-radius: 3px;
+        background-color: #2b3a42;
+        color: rgba(255, 255, 255, 0.86);
+      }
+      img {
+        max-width: 100%;
+        vertical-align: middle;
+        display: inline-block;
+      }
+      @media screen and (max-width: 991px) {
+        .two-col-grid {
+          justify-items: center;
+          -ms-grid-columns: 1fr;
+          grid-template-columns: 1fr;
+        }
+      }
+      /* section2 end */
+      /* section3 start */
+      .title-container {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        max-width: 770px;
+        margin-right: auto;
+        margin-bottom: 30px;
+        margin-left: auto;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+      }
+      .team-grid {
+        display: -ms-grid;
+        display: grid;
+        width: 100%;
+        max-width: 870px;
+        margin-right: auto;
+        margin-left: auto;
+        grid-auto-columns: 1fr;
+        grid-column-gap: 30px;
+        grid-row-gap: 50px;
+        -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        -ms-grid-rows: auto;
+        grid-template-rows: auto;
+      }
+      #w-node-_37a01fb2-3b19-cbcd-1145-d42cd3b984e8-e8d880ae {
+        -ms-grid-column-span: 4;
+        grid-column-end: 7;
+        /* -ms-grid-column: 3; */
+        grid-column-start: 3;
+        -ms-grid-row-span: 1;
+        grid-row-end: 2;
+        /* -ms-grid-row: 1; */
+        grid-row-start: 1;
+      }
+      .testimonial-details-v-3 {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+      }
+      .team-member {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 30px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 16px 24px 0 rgb(55 68 111 / 10%);
+        text-align: center;
+      }
+
+      #w-node-_6282e135-e29f-5b03-4384-6703ca58150f-e8d880ae {
+        /* -ms-grid-column: span 1; */
+        grid-column-start: span 1;
+        -ms-grid-column-span: 1;
+        grid-column-end: span 1;
+        /* -ms-grid-row: span 1; */
+        grid-row-start: span 1;
+        -ms-grid-row-span: 1;
+        grid-row-end: span 1;
+      }
+      .large-avatar {
+        width: 124px;
+        height: 124px;
+        margin-bottom: 24px;
+        border-radius: 100%;
+        background-image: url(https://uploads-ssl.webflow.com/60fa039…/60fa039…_Avatar_5.jpg);
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+      .h5 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 600;
+      }
+
+      .small-text {
+        color: #8087a6;
+        font-size: 14px;
+      }
+      .social-container.margin-top {
+        margin-top: 14px;
+      }
+      .social-link {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 28px;
+        height: 28px;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-transition: all 200ms ease;
+        transition: all 200ms ease;
+      }
+
+      #w-node-_37a01fb2-3b19-cbcd-1145-d42cd3b984f8-e8d880ae {
+        -ms-grid-column-span: 4;
+        grid-column-end: 11;
+        /* -ms-grid-column: 7; */
+        grid-column-start: 7;
+        -ms-grid-row-span: 1;
+        grid-row-end: 2;
+        /* -ms-grid-row: 1; */
+        grid-row-start: 1;
+      }
+      #w-node-_2c884f87-ec62-7a94-53d7-d0db8945e0b9-e8d880ae {
+        /* -ms-grid-column: span 1; */
+        grid-column-start: span 1;
+        -ms-grid-column-span: 1;
+        grid-column-end: span 1;
+        /* -ms-grid-row: span 1; */
+        grid-row-start: span 1;
+        -ms-grid-row-span: 1;
+        grid-row-end: span 1;
+      }
+      .social-container {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+      }
+
+      /* section3 end */
+    </style>
+    <!-- {% if page.css %}
+        {% for stylesheet in page.css %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ stylesheet }}.css" type="text/css">
+    {% endfor %}
+  {% endif %} -->
+  </head>
+  <body>
+    <div class="section hero-grey wf-section">
+      <div class="container">
+        <div
+          class="small-container center"
+          style="
+            opacity: 1;
+            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+              rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+            transform-style: preserve-3d;
+          "
+        >
+          <h2 class="h2 margin">About Us</h2>
+          <h3 class="h5">
+            LearnPack is a platform that facilitates the creation, distribution
+            and delivery of learning materials for technical skills.
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div class="section wf-section">
+      <div class="container">
+        <div class="two-col-grid">
+          <div
+            class="small-container"
+            style="
+              opacity: 1;
+              transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
+                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+              transform-style: preserve-3d;
+            "
+          >
+            <h2 class="h2">The Problem</h2>
+            <p>
+              <em>Let's be honest, learning online still sucks!<br />‍<br /></em
+              >Learning content has never been more accessible but
+              <span class="text-span">quantity ≠ quality</span> and learning
+              materials today are being published the same way as 20 years ago.
+              As programmers, we wanted to simplify the learning process of
+              coding technologies, eliminating tedious steps such as setting the
+              environment, in order to focus on what really matters: coding.
+            </p>
+            <h2 class="h2">The Solution</h2>
+            <p>
+              <em>We need better tools.</em><br /><br />LearnPack is here to
+              remove the friction that exists in the creation and delivery of
+              technical learning materials allowing creators to make content
+              interactive, audiovisual, auto-graded and immediately available to
+              their audiences without a big learning curve or difficulty.
+            </p>
+          </div>
+          <img
+            src="https://uploads-ssl.webflow.com/60fa0394d698b446ebd88090/60fa0394d698b41ef7d8810b_Analytics%20team_Monochromatic.svg"
+            loading="lazy"
+            style="
+              opacity: 1;
+              transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
+                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+              transform-style: preserve-3d;
+            "
+            data-w-id="e68baade-2048-4af8-d673-54211cc5e621"
+            alt="analytics-team"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="section wf-section">
+      <div class="container meet-our-team">
+        <div
+          class="title-container"
+          style="
+            opacity: 1;
+            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+              rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+            transform-style: preserve-3d;
+          "
+        >
+          <h2 class="h2">Meet the faces behind Learnpack</h2>
+          <p>
+            <br />Our team is full of programmers and tech lovers who are in
+            constant search of new technologies to make coding a smooth sale for
+            beginner and advanced programmers.
+          </p>
+        </div>
+        <div class="team-grid">
+          <div
+            id="w-node-_37a01fb2-3b19-cbcd-1145-d42cd3b984e8-e8d880ae"
+            class="team-member"
+            style="
+              opacity: 1;
+              transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
+                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+              transform-style: preserve-3d;
+            "
+          >
+            <div class="testimonial-details-v-3">
+              <img
+                src="https://uploads-ssl.webflow.com/60fa0394d698b446ebd88090/629fbf5620fe1a6af58b83d7_alejandro-profile-pic.png"
+                loading="lazy"
+                id="w-node-_6282e135-e29f-5b03-4384-6703ca58150f-e8d880ae"
+                alt="Alejandro's Picture"
+                class="large-avatar"
+              />
+              <div class="h5">Alejandro Sanchez</div>
+              <div class="small-text">CEO</div>
+            </div>
+            <p>
+              20 years coding, 8 years teaching code, co-funder of one of the
+              biggest coding bootcamps in the world
+            </p>
+            <div class="social-container margin-top">
+              <a
+                href="https://twitter.com/alesanchezr"
+                target="_blank"
+                class="social-link w-inline-block"
+                ><img
+                  src="https://uploads-ssl.webflow.com/60fa0394d698b446ebd88090/60fa0394d698b4162ed88114_Twitter_icon.svg"
+                  loading="lazy"
+                  alt="twitter" /></a
+              ><a
+                href="https://www.linkedin.com/in/alesanchezr/"
+                target="_blank"
+                class="social-link w-inline-block"
+                ><img
+                  src="https://uploads-ssl.webflow.com/60fa0394d698b446ebd88090/60fa0394d698b4441cd88113_linkedin%201.svg"
+                  loading="lazy"
+                  alt="linkedin" /></a
+              ><a
+                href="https://github.com/alesanchezr"
+                target="_blank"
+                class="social-link w-inline-block"
+                ><img
+                  src="https://uploads-ssl.webflow.com/60fa0394d698b446ebd88090/629fc1999755a8e948c5830e_github-logo.svg"
+                  loading="lazy"
+                  width="20"
+                  alt="Github's logo"
+              /></a>
+            </div>
+          </div>
+          <div
+            id="w-node-_37a01fb2-3b19-cbcd-1145-d42cd3b984f8-e8d880ae"
+            class="team-member"
+            style="
+              opacity: 1;
+              transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
+                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+              transform-style: preserve-3d;
+            "
+          >
+            <div class="testimonial-details-v-3">
+              <img
+                src="https://uploads-ssl.webflow.com/60fa0394d698b446ebd88090/62a383b18e9199bb28d2b01e_profile_pic.png"
+                loading="lazy"
+                id="w-node-_2c884f87-ec62-7a94-53d7-d0db8945e0b9-e8d880ae"
+                srcset="
+                  https://uploads-ssl.webflow.com/60fa0394d698b446ebd88090/62a383b18e9199bb28d2b01e_profile_pic-p-500.png   500w,
+                  https://uploads-ssl.webflow.com/60fa0394d698b446ebd88090/62a383b18e9199bb28d2b01e_profile_pic-p-800.png   800w,
+                  https://uploads-ssl.webflow.com/60fa0394d698b446ebd88090/62a383b18e9199bb28d2b01e_profile_pic-p-1080.png 1080w,
+                  https://uploads-ssl.webflow.com/60fa0394d698b446ebd88090/62a383b18e9199bb28d2b01e_profile_pic.png        1600w
+                "
+                alt="Tomas' picture"
+                sizes="124px"
+                class="large-avatar"
+              />
+              <div class="h5">Tomas&nbsp;Gonzalez</div>
+              <div class="small-text">CTO</div>
+            </div>
+            <p>
+              Tech lead of interactive learning experiences at 4Geeks Academy
+            </p>
+            <div class="social-container margin-top">
+              <a
+                href="https://twitter.com/tomasgonzalezad"
+                target="_blank"
+                class="social-link w-inline-block"
+                ><img
+                  src="https://uploads-ssl.webflow.com/60fa0394d698b446ebd88090/60fa0394d698b4162ed88114_Twitter_icon.svg"
+                  loading="lazy"
+                  alt="twitter" /></a
+              ><a
+                href="https://www.linkedin.com/in/tomasgonzaleza/"
+                class="social-link w-inline-block"
+                ><img
+                  src="https://uploads-ssl.webflow.com/60fa0394d698b446ebd88090/60fa0394d698b4441cd88113_linkedin%201.svg"
+                  loading="lazy"
+                  alt="linkedin" /></a
+              ><a
+                href="https://github.com/tommygonzaleza/"
+                target="_blank"
+                class="social-link w-inline-block"
+                ><img
+                  src="https://uploads-ssl.webflow.com/60fa0394d698b446ebd88090/629fc1999755a8e948c5830e_github-logo.svg"
+                  loading="lazy"
+                  width="20"
+                  alt="Github's logo"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=60fa0394d698b446ebd88090"
+      type="text/javascript"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://uploads-ssl.webflow.com/60fa0394d698b446ebd88090/js/webflow.641ea451e.js"
+      type="text/javascript"
+    ></script>
+    <script src="https://learnpack-gif.s3.us-west-2.amazonaws.com/bundle.js"></script>
+  </body>
+</html>
